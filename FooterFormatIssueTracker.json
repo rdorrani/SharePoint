@@ -1,0 +1,31 @@
+{
+    "debugMode": true,
+    "elmType": "div",
+    "style": {
+        "width": "100%",
+        "text-align": "left",
+        "overflow": "hidden",
+        "border-top-width": "1px"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "style": {
+                "width": "100%",
+                "padding-top": "10px",
+                "height": "24px"
+            },
+            "children": [
+                {
+                    "elmType": "a",
+                    "txtContent": "Contact Administrator",
+                    "attributes": {
+                        "target": "_blank",
+                        "href": "",
+                        "class": "ms-fontColor-themePrimary ms-borderColor-themePrimary ms-fontWeight-semibold ms-fontSize-m ms-fontColor-neutralSecondary–hover ms-bgColor-themeLight–hover"
+                    }
+                }
+            ]
+        }
+    ]
+}

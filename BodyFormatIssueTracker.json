@@ -1,0 +1,41 @@
+{
+    "sections": [
+        {
+            "displayname": "Information",
+            "fields": [
+                "Issue",
+                "Date reported",
+                "Issue description"
+            ]
+        },
+        {
+            "displayname": "Details",
+            "fields": [
+                "Assigned to",
+                "Priority",
+                "Expected Completion Date"
+            ]
+        },
+        {
+            "displayname": "Action",
+            "fields": [
+                "Status",
+                "Comments"
+            ]
+        },
+        {
+            "displayname": "Additional Info",
+            "fields": [
+                "Issue source",
+                "Issue logged by",
+                "Images"
+            ]
+        },
+        {
+            "displayname": "Attachments",
+            "fields": [
+                "Days old"
+            ]
+        }
+    ]
+}
