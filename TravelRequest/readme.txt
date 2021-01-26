@@ -8,3 +8,6 @@ Add 2 columns:
 Conditional formula:
 Estimated airfare =if([$Airline]=='','false', 'true')
 Estimated hotel cost =if([$Hotel]=='','false', 'true')
+
+In the headerformatting.json file, replace the YourBingMapsKey text with your own Bing Maps Key.
+get a Bing Maps Key -https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key
