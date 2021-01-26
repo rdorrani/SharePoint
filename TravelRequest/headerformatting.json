@@ -1,0 +1,190 @@
+{
+"elmType": "div",
+"attributes": {
+"class": "ms-bgColor-neutralPrimary ms-fontColor-white"
+},
+"children": [
+{
+"elmType": "div",
+"style": {
+"border": "2px solid #666666",
+"width": "300px",
+"height": "200px"
+},
+"children": [
+{
+"elmType": "a",
+"attributes": {
+"href": "='https://www.google.com/maps/place/' + [$Destination.Coordinates.Latitude] + ','+[$Destination.Coordinates.Longitude] + '/'",
+"target": "_blank"
+},
+"style": {
+"height": "100%"
+},
+"children": [
+{
+"elmType": "img",
+"attributes": {
+"src": "='https://dev.virtualearth.net/REST/v1/Imagery/Map/AerialWithLabels/' + [$Destination.Coordinates.Latitude] + ','+[$Destination.Coordinates.Longitude] +'/10?mapSize=300,200&key=YourBingMapsKey&pp='+[$Destination.Coordinates.Latitude]+','+[$Destination.Coordinates.Longitude]+'"
+}
+}
+]
+}
+]
+},
+{
+"elmType": "div",
+"style": {
+"margin": "5px",
+"width": "100%",
+"height": "160px",
+"border": "2px dashed",
+"padding": "10px",
+"display": "flex",
+"flex-direction": "column",
+"align-items": "center"
+},
+"children": [
+{
+"elmType": "div",
+"txtContent": "Travel Request Process",
+"attributes": {
+"class": "ms-fontSize-28 ms-fontWeight-bold"
+}
+},
+{
+"elmType": "div",
+"txtContent": "=[$Destination.DisplayName]",
+"attributes": {
+"class": "ms-fontSize-16"
+}
+},
+{
+"elmType": "div",
+"children": [
+{
+"elmType": "span",
+"attributes": {
+"iconName": "Money",
+"class": "ms-fontSize-22 ms-fontWeight-regular ms-fontColor-white",
+"title": "Issue"
+},
+"style": {
+"flex": "none",
+"padding": "0px",
+"padding-right": "5px",
+"padding-left": "0px",
+"height": "16px"
+}
+},
+{
+"elmType": "span",
+"txtContent": "$",
+"attributes": {
+"class": "ms-fontSize-16"
+}
+},
+{
+"elmType": "span",
+"txtContent": "=[$EstimatedAirfare] +[$EstimatedHotelCost] ",
+"attributes": {
+"class": "ms-fontSize-16"
+}
+}
+]
+},
+{
+"elmType": "div",
+"style": {
+"display": "flex",
+"justify-content": "center",
+"width": "100%"
+},
+"children": [
+{
+"elmType": "div",
+"style": {
+"display": "flex",
+"flex-direction": "row"
+},
+"children": [
+{
+"elmType": "div",
+"style": {
+"width": "140px",
+"display": "flex",
+"flex-direction": "column",
+"align-items": "center",
+"margin": "20px"
+},
+"children": [
+{
+"elmType": "div",
+"txtContent": "Manager Approval",
+"style": {
+"margin-bottom": "5px"
+},
+"attributes": {
+"class": "ms-fontSize-15"
+}
+},
+{
+"elmType": "div",
+"attributes": {
+"iconName": "=if([$ApprovalStatus] == 'Approved' ,'CompletedSolid' ,if([$ApprovalStatus] == 'Rejected by HR' ,'CompletedSolid' , if([$ApprovalStatus] == 'Pending HR Approval' ,'CompletedSolid' ,'CircleShapeSolid')))",
+"class": "=if([$ApprovalStatus] == 'Approved' ,'ms-fontSize-42 ms-fontColor-green',if([$ApprovalStatus] == 'Pending HR Approval' ,'ms-fontSize-42 ms-fontColor-green',if([$ApprovalStatus] == 'Rejected by HR' ,'ms-fontSize-42 ms-fontColor-green',if([$ApprovalStatus] == 'Pending Manager Approval' , 'ms-fontSize-42 ms-fontColor-yellow' ,if([$ApprovalStatus] == 'Rejected by Manager' , 'ms-fontSize-42 ms-fontColor-red' , 'ms-fontSize-42 ms-fontColor-neutralTertiary')))))"
+}
+}
+]
+},
+{
+"elmType": "div",
+"style": {
+"width": "80px",
+"display": "flex",
+"flex-direction": "column",
+"align-items": "center",
+"margin-top": "50px"
+},
+"txtContent": "---------->",
+"attributes": {
+"class": "ms-fontSize-16"
+}
+},
+{
+"elmType": "div",
+"style": {
+"width": "120px",
+"display": "flex",
+"flex-direction": "column",
+"align-items": "center",
+"margin": "20px"
+},
+"children": [
+{
+"elmType": "div",
+"txtContent": "HR Approval",
+"style": {
+"margin-bottom": "5px"
+},
+"attributes": {
+"class": "ms-fontSize-15"
+}
+},
+{
+"elmType": "div",
+"attributes": {
+"iconName": "=if([$ApprovalStatus] == 'Approved' ,'CompletedSolid' , 'CircleShapeSolid')",
+"class": "=if([$ApprovalStatus] == 'Approved' ,'ms-fontSize-42 ms-fontColor-green',if([$ApprovalStatus] == 'Pending HR Approval' , 'ms-fontSize-42 ms-fontColor-yellow' ,if([$ApprovalStatus] == 'Rejected by HR' , 'ms-fontSize-42 ms-fontColor-red' , 'ms-fontSize-42 ms-fontColor-neutralTertiary'))"
+}
+}
+]
+}
+]
+}
+]
+}
+]
+}
+]
+}

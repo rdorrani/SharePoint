@@ -1,0 +1,42 @@
+{
+    "sections": [
+        {
+            "displayname": "Details",
+            "fields": [
+                "Trip title",
+                "Reason for travel",
+                "Requester",
+                "Travel start date",
+                "Destination",
+                "Travel end date",
+                "Travel duration (days)"
+            ]
+        },
+        {
+            "displayname": "Airfare",
+            "fields": [
+                "Airline",
+                "Estimated airfare"
+            ]
+        },
+        {
+            "displayname": "Hotel",
+            "fields": [
+                "Hotel",
+                "Estimated hotel cost"
+            ]
+        },
+        {
+            "displayname": "Approval Info",
+            "fields": [
+                "Approval Status",                "Approval Comments"
+            ]
+        },
+        {
+            "displayname": "Attachments",
+            "fields": [
+                "Assigned To"
+            ]
+        }
+    ]
+}
