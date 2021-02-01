@@ -1,0 +1,39 @@
+{
+    "sections": [
+        {
+            "displayname": "Information",
+            "fields": [
+                "Asset tag",
+                "Manufacturer",
+                "Model",
+                "Asset type"
+            ]
+        },
+        {
+            "displayname": "Details",
+            "fields": [
+                "Serial number",
+                "Order #",
+                "Color",
+                "Purchase price",
+                "Purchase date"
+            ]
+        },
+        {
+            "displayname": "Ownership",
+            "fields": [
+                "Current owner",
+                "Due date",
+                "Previous owner"
+            ]
+        },
+        {
+            "displayname": "Status",
+            "fields": [
+                "Status",
+                "Condition notes",
+                "Device Photo"
+            ]
+        }
+    ]
+}

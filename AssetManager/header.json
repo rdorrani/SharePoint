@@ -1,0 +1,176 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+    "debugMode": false,
+    "elmType": "div",
+    "attributes": {
+        "class": "ms-borderColor-neutralTertiary ms-fontSize-20"
+    },
+    "style": {
+        "font-family": "Segoe UI Regular WestEuropean",
+        "width": "80%",
+        "border-top-width": "0px",
+        "border-bottom-width": "1px",
+        "border-left-width": "0px",
+        "border-right-width": "0px",
+        "border-style": "solid",
+        "margin-bottom": "16px",
+        "display": "=if([$Status]=='','none',''"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "attributes": {
+                "class": "=if([$Status]=='','ms-bgColor-white',if([$Status]== 'Available', 'ms-bgColor-green', if([$Status]== 'In use', 'ms-bgColor-blue', if([$Status]== 'Reserved', 'ms-bgColor-yellow', if([$Status] == 'In repair', 'ms-bgColor-red', 'ms-bgColor-red')))))"
+            },
+            "style": {
+                "width": "20px",
+                "height": "180px",
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center"
+            }
+        },
+        {
+            "elmType": "div",
+            "attributes": {
+                "class": "ms-bgColor-themePrimary ms-fontColor-white"
+            },
+            "style": {
+                "margin": "5px",
+                "width": "100%",
+                "height": "160px",
+                "border": "5px ridge",
+                "padding": "6px",
+                "display": "flex",
+                "flex-direction": "column",
+                "align-items": "center"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "='[$Model]' + ' (' +  '[$AssetType]' + ')'",
+                    "attributes": {
+                        "class": "ms-fontWeight-bold"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "[$Title]",
+                    "attributes": {
+                        "class": "ms-fontWeight-bold"
+                    },
+                    "style": {
+                        "text-decoration": "underline"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "=[$Manufacturer] + ' (' + [$SerialNumber] + ')'"
+                },
+                {
+                    "elmType": "div",
+                    "children": [
+                        {
+                            "elmType": "span",
+                            "style": {
+                                "padding-right": "8px"
+                            },
+                            "txtContent": "Email Manufacturer"
+                        },
+                        {
+                            "elmType": "a",
+                            "class": "sp-field-quickActions",
+                            "attributes": {
+                                "class": "ms-fontSize-20 ms-fontColor-white",
+                                "iconName": "Mail",
+                                "href": "='mailto:' + '' + '?subject='+ [$Model]+' - Order Number: '+[$OrderNumber]+' - Serial Number: '+ [$SerialNumber] + '&body=Hello, \r\n\r\n' + 'I have the following query regarding the order: '"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "children": [
+                        {
+                            "elmType": "span",
+                            "attributes": {
+                                "iconName": "Money",
+                                "class": "ms-fontWeight-regular",
+                                "title": "Money"
+                            },
+                            "style": {
+                                "flex": "none",
+                                "padding-top": "10px",
+                                "padding-right": "5px",
+                                "padding-left": "0px",
+                                "height": "10px"
+                            }
+                        },
+                        {
+                            "elmType": "span",
+                            "txtContent": "$"
+                        },
+                        {
+                            "elmType": "span",
+                            "txtContent": "[$PurchasePrice]"
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                        "justify-content": "center",
+                        "width": "100%",
+                        "height": "35px"
+                    },
+                    "attributes": {
+                        "class": "=if([$DueDate]=='','',if(Number(Date([$DueDate])) <= Number(@now),'ms-bgColor-white  ms-fontColor-themePrimary',''))"
+                    },
+                    "children": [
+                        {
+                            "elmType": "div",
+                            "style": {
+                                "display": "flex",
+                                "flex-direction": "row"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "div",
+                                    "style": {
+                                        "width": "100%",
+                                        "display": "flex",
+                                        "flex-direction": "column",
+                                        "align-items": "center",
+                                        "margin": "0px"
+                                    },
+                                    "children": [
+                                        {
+                                            "attributes": {
+                                                "class": "ms-fontSize-24",
+                                                "iconName": "=if([$DueDate]=='','',if(Number(Date([$DueDate])) <= Number(@now),'Warning',''))"
+                                            },
+                                            "elmType": "div",
+                                            "txtContent": "=if([$DueDate]=='','',if(Number(Date([$DueDate])) <= Number(@now),' Asset is Due!',''))",
+                                            "style": {
+                                                "margin-top": "5px"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "elmType": "img",
+            "attributes": {
+                "src": "[$DevicePhoto.serverRelativeUrl]"
+            },
+            "style": {
+                "height": "180px"
+            }
+        }
+    ]
+}
