@@ -1,0 +1,27 @@
+{
+    "sections": [
+        {
+            "displayname": "Event Info",
+            "fields": [
+                "Title",
+                "Category",
+                "Description"
+            ]
+        },
+        {
+            "displayname": "Event Details",
+            "fields": [
+                "Location",
+                "Start Time",
+                "End Time"
+            ]
+        },
+        {
+            "displayname": "Attachments",
+            "fields": [
+                "All Day Event",
+                "Recurrence"
+            ]
+        }
+    ]
+}

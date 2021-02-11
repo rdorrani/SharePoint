@@ -1,0 +1,277 @@
+{
+    "elmType": "div",
+    "style": {
+        "display": "=if([$Title] == '' , 'none' , '')",
+        "flex-direction": "row",
+        "min-height": "100px",
+        "width": "100%",
+        "margin-bottom": "10px"
+    },
+    "attributes": {
+        "class": "ms-fontColor-themePrimary"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "style": {
+                "width": "250px",
+                "justify-content": "center",
+                "padding-bottom": "5px",
+                "display": "=if(Number([$EventDate]) == 0 , 'none' , 'flex')"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "style": {
+                        "flex-direction": "column",
+                        "width": "85px",
+                        "margin": "5px",
+                        "display": "flex",
+                        "align-items": "center"
+                    },
+                    "children": [
+                        {
+                            "elmType": "div",
+                            "txtContent": "=getYear([$EventDate])",
+                            "style": {
+                                "margin": "2px"
+                            },
+                            "attributes": {
+                                "class": "ms-fontColor-themePrimary ms-fontWeight-bold ms-fontSize-24"
+                            }
+                        },
+                        {
+                            "elmType": "div",
+                            "txtContent": "=if(getMonth([$EventDate])==0, 'Jan', if(getMonth([$EventDate])==1, 'Feb', if(getMonth([$EventDate])==2, 'Mar', if(getMonth([$EventDate])==3, 'Apr',  if(getMonth([$EventDate])==4, 'May', if(getMonth([$EventDate])==5, 'Jun', if(getMonth([$EventDate])==6 , 'Jul', if(getMonth([$EventDate])==7, 'Aug', if(getMonth([$EventDate])==8 , 'Sep', if(getMonth([$EventDate])==9, 'Oct', if(getMonth([$EventDate])==10, 'Nov', if(getMonth([$EventDate])==11, 'Dec', ''))))))))))))",
+                            "style": {
+                                "display": "flex",
+                                "justify-content": "center",
+                                "align-items": "center",
+                                "width": "100%",
+                                "height": "30px",
+                                "border": "1px solid",
+                                "margin-bottom": "-1px"
+                            },
+                            "attributes": {
+                                "class": "ms-bgColor-themePrimary ms-fontColor-white ms-borderColor-themePrimary ms-fontWeight-bold ms-fontSize-24"
+                            }
+                        },
+                        {
+                            "elmType": "div",
+                            "txtContent": "=getDate([$EventDate])",
+                            "style": {
+                                "display": "flex",
+                                "justify-content": "center",
+                                "align-items": "center",
+                                "width": "83px",
+                                "border": "1px solid",
+                                "height": "50px"
+                            },
+                            "attributes": {
+                                "class": "ms-fontColor-themePrimary ms-borderColor-themePrimary ms-fontWeight-bold ms-fontSize-42"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "elmType": "div",
+                    "style": {
+                        "flex-direction": "column",
+                        "width": "85px",
+                        "margin": "5px",
+                        "display": "=if(toLocaleDateString([$EventDate])==toLocaleDateString([$EndDate]),'none','flex')",
+                        "align-items": "center"
+                    },
+                    "children": [
+                        {
+                            "elmType": "div",
+                            "txtContent": "=getYear([$EndDate])",
+                            "style": {
+                                "margin": "2px"
+                            },
+                            "attributes": {
+                                "class": "ms-fontColor-themePrimary ms-fontWeight-bold ms-fontSize-24"
+                            }
+                        },
+                        {
+                            "elmType": "div",
+                            "txtContent": "=if(getMonth([$EndDate])==0, 'Jan', if(getMonth([$EndDate])==1, 'Feb', if(getMonth([$EndDate])==2, 'Mar', if(getMonth([$EndDate])==3, 'Apr',  if(getMonth([$EndDate])==4, 'May', if(getMonth([$EndDate])==5, 'Jun', if(getMonth([$EndDate])==6 , 'Jul', if(getMonth([$EndDate])==7, 'Aug', if(getMonth([$EndDate])==8 , 'Sep', if(getMonth([$EndDate])==9, 'Oct', if(getMonth([$EndDate])==10, 'Nov', if(getMonth([$EndDate])==11, 'Dec', ''))))))))))))",
+                            "style": {
+                                "display": "flex",
+                                "justify-content": "center",
+                                "align-items": "center",
+                                "width": "100%",
+                                "height": "30px",
+                                "border": "1px solid",
+                                "margin-bottom": "-1px"
+                            },
+                            "attributes": {
+                                "class": "ms-bgColor-themePrimary ms-fontColor-white ms-borderColor-themePrimary ms-fontWeight-bold ms-fontSize-24"
+                            }
+                        },
+                        {
+                            "elmType": "div",
+                            "txtContent": "=getDate([$EndDate])",
+                            "style": {
+                                "display": "flex",
+                                "justify-content": "center",
+                                "align-items": "center",
+                                "width": "83px",
+                                "border": "1px solid",
+                                "height": "50px"
+                            },
+                            "attributes": {
+                                "class": "ms-fontColor-themePrimary ms-borderColor-themePrimary ms-fontWeight-bold ms-fontSize-42"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "style": {
+                "margin": "10px",
+                "width": "100%",
+                "display": "flex",
+                "align-items": "center",
+                "justify-content": "center"
+            },
+            "attributes": {
+                "class": "ms-bgColor-themePrimary ms-fontColor-white"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "style": {
+                        "margin": "10px",
+                        "width": "100%",
+                        "height": "100%",
+                        "border": "2px dashed",
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "align-items": "center"
+                    },
+                    "children": [
+                        {
+                            "elmType": "div",
+                            "style": {
+                                "padding": "5px",
+                                "text-align": "center"
+                            },
+                            "attributes": {
+                                "class": "ms-fontSize-28 ms-fontWeight-bold"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "span",
+                                    "txtContent": "[$Title]"
+                                }
+                            ]
+                        },
+                        {
+                            "elmType": "div",
+                            "style": {
+                                "width": "100%",
+                                "min-height": "50px",
+                                "display": "flex",
+                                "flex-wrap": "wrap",
+                                "align-items": "center",
+                                "justify-content": "space-evenly"
+                            },
+                            "attributes": {
+                                "class": "ms-fontSize-14 ms-fontColor-themePrimary"
+                            },
+                            "children": [
+                                {
+                                    "elmType": "div",
+                                    "style": {
+                                        "display": "=if(Number([$EventDate]) == 0 , 'none' , '')",
+                                        "border-radius": "10px",
+                                        "padding": "5px 10px 5px 10px",
+                                        "white-space": "wrap",
+                                        "margin": "5px"
+                                    },
+                                    "attributes": {
+                                        "class": "ms-bgColor-white"
+                                    },
+                                    "children": [
+                                        {
+                                            "elmType": "span",
+                                            "style": {
+                                                "padding-right": "5px"
+                                            },
+                                            "attributes": {
+                                                "iconName": "DateTimeMirrored"
+                                            }
+                                        },
+                                        {
+                                            "elmType": "span",
+                                            "txtContent": "=if(toLocaleDateString([$EventDate])==toLocaleDateString([$EndDate]),toLocaleTimeString([$EventDate]) + ' - ' + toLocaleTimeString([$EndDate]),toLocaleString([$EventDate]) + ' - ' + toLocaleString([$EndDate]))"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elmType": "div",
+                                    "style": {
+                                        "display": "=if([$Location] == '' , 'none' , '')",
+                                        "border-radius": "10px",
+                                        "padding": "5px 10px 5px 10px",
+                                        "white-space": "wrap",
+                                        "margin": "5px"
+                                    },
+                                    "attributes": {
+                                        "class": "ms-bgColor-white"
+                                    },
+                                    "children": [
+                                        {
+                                            "elmType": "span",
+                                            "style": {
+                                                "padding-right": "5px"
+                                            },
+                                            "attributes": {
+                                                "iconName": "MapPin"
+                                            }
+                                        },
+                                        {
+                                            "elmType": "span",
+                                            "txtContent": "[$Location]"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "elmType": "div",
+                                    "style": {
+                                        "display": "=if([$Category] == '' , 'none' , '')",
+                                        "border-radius": "10px",
+                                        "padding": "5px 10px 5px 10px",
+                                        "white-space": "wrap",
+                                        "margin": "5px"
+                                    },
+                                    "attributes": {
+                                        "class": "ms-bgColor-white"
+                                    },
+                                    "children": [
+                                        {
+                                            "elmType": "span",
+                                            "style": {
+                                                "padding-right": "5px"
+                                            },
+                                            "attributes": {
+                                                "iconName": "People"
+                                            }
+                                        },
+                                        {
+                                            "elmType": "span",
+                                            "txtContent": "[$Category]"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
