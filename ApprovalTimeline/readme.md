@@ -3,8 +3,11 @@
 🎥 https://www.youtube.com/watch?v=lYE7NXTDPJY
 
 Assigned To - Person type column (multi-select) 
+
 Approval Timeline - Multi line text column
+
 Approval Comments - Multi line text column
+
 Approval Pending Since - Single line of text column
 
 **Make sure to match the SharePoint column internal names in JSON with your lists internal column names.**
