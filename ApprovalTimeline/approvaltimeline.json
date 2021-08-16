@@ -1,0 +1,83 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "position": "relative",
+    "width": "100%",
+    "height": "70px"
+  },
+  "children": [
+    {
+      "elmType": "div",
+      "style": {
+        "position": "absolute",
+        "display": "flex",
+        "align-items": "center",
+        "justify-content": "center",
+        "width": "100%",
+        "height": "100%"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "width": "100%",
+            "height": "5px"
+          },
+          "attributes": {
+            "class": "ms-bgColor-neutralSecondaryAlt"
+          }
+        }
+      ]
+    },
+    {
+      "elmType": "div",
+      "style": {
+        "position": "absolute",
+        "display": "flex",
+        "align-items": "center",
+        "justify-content": "=if([$TicketStatus]=='Pending','center',if([$TicketStatus]=='New','left','flex-end'))",
+        "width": "100%",
+        "height": "100%"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "width": "25px",
+            "height": "25px",
+            "border-radius": "50%",
+            "cursor": "pointer"
+          },
+          "attributes": {
+            "class": "=if([$TicketStatus]=='Rejected','ms-bgColor-red',if([$TicketStatus]=='Pending','ms-bgColor-yellow',if([$TicketStatus]=='Completed','ms-bgColor-green','ms-bgColor-blue')))"
+          },
+          "customCardProps": {
+            "directionalHint": "rightCenter",
+            "openOnEvent": "click",
+            "isBeakVisible": true,
+            "formatter": {
+              "elmType": "div",
+              "style": {
+                "width": "300px",
+                "height": "300px",
+                "padding": "10px 20px 10px 20px",
+                "background-color": "#E6E6E3"
+              },
+              "children": [
+                {
+                  "elmType": "div",
+                  "txtContent": "=if([$TicketStatus]!='New',[$ApprovalComments],'No History Available'",
+                  "style": {
+                    "width": "100%",
+                    "height": "100%"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

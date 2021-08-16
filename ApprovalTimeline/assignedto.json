@@ -1,0 +1,89 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "display": "=if([$AssignedTo]!='','flex','none')"
+  },
+  "children": [
+    {
+      "elmType": "a",
+      "attributes": {
+        "href": "='https://teams.microsoft.com/l/chat/0/0?users=' + join(@currentField.email,',') + '&topicName=' + [$Title] + '&message='",
+        "class": "ms-fontColor-themePrimary ms-fontColor-themeDark--hover",
+        "title": "='Start a chat with ' + join(@currentField.title, ', ')",
+        "target": "_new"
+      },
+      "style": {
+        "text-decoration": "none"
+      },
+      "children": [
+        {
+          "elmType": "span",
+          "attributes": {
+            "iconName": "TeamsLogo"
+          },
+          "style": {
+            "padding-right": "4px"
+          }
+        },
+        {
+          "elmType": "span",
+          "txtContent": "Chat 👉 "
+        }
+      ]
+    },
+    {
+      "forEach": "personIterator in @currentField",
+      "elmType": "div",
+      "style": {
+        "width": "32px",
+        "height": "32px",
+        "overflow": "hidden",
+        "border-radius": "50%",
+        "margin": "2px",
+        "display": "=if(loopIndex('personIterator') >= 3, 'none', '')"
+      },
+      "children": [
+        {
+          "elmType": "img",
+          "attributes": {
+            "src": "=@currentWeb + '/_layouts/15/userphoto.aspx?size=S&accountname=' + [$personIterator.email]",
+            "title": "[$personIterator.title]"
+          },
+          "style": {
+            "position": "relative",
+            "top": "50%",
+            "left": "50%",
+            "width": "100%",
+            "height": "auto",
+            "margin-left": "-50%",
+            "margin-top": "-50%",
+            "display": "=if(length(@currentField) > 3 && loopIndex('personIterator') >= 2, 'none', '')",
+            "vertical-align": "baseline"
+          }
+        },
+        {
+          "elmType": "div",
+          "attributes": {
+            "title": "=join(@currentField.title, ', ')",
+            "class": "ms-bgColor-neutralLight ms-fontColor-neutralSecondary"
+          },
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "text-align": "center",
+            "line-height": "30px",
+            "font-size": "14px",
+            "display": "=if(length(@currentField) > 3 && loopIndex('personIterator') == 2, '', 'none')"
+          },
+          "children": [
+            {
+              "elmType": "span",
+              "txtContent": "='+' + toString(length(@currentField) - (2))"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

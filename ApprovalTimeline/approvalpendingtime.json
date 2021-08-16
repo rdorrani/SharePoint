@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+  "elmType": "div",
+  "txtContent": "= '⏱ ' + floor((Number(@now)-Number([$CurrentApprovalStartDateandTime]))/(1000*60)) + ' min(s)'",
+  "style": {
+    "border": "none",
+    "background-color": "transparent",
+    "cursor": "pointer",
+    "display": "=if([$AssignedTo]!='','flex','none')"
+  }
+}
