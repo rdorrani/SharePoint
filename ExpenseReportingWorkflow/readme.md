@@ -47,6 +47,7 @@ Save the view.
 Go to Power Automate (flow.microsoft.com) and import the following flow:<br> 
 [Import flow](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/%F0%9F%92%B2ExpenseReportApprovalWorkflow_20210831225203.zip). <br> <br> 
 Once imported, ensure you update all the SharePoint actions to point to your newly created lists.  <br> 
+Follow Video to see the lists being references in specific actions in flow. <br>
 Make sure to turn the flow on.<br><br>
 If Import fails then click on "Save as a new flow" link option in error message.
 
