@@ -1,0 +1,29 @@
+{
+    "sections": [
+        {
+            "displayname": "📝 Details",
+            "fields": [
+                "Title",
+                "Amount",
+                "Description",
+                "Expense Type"
+            ]
+        },
+        {
+            "displayname": "📅 From - 📅 To",
+            "fields": [
+                "Start Date",
+                "End Date"
+            ]
+        },
+        {
+            "displayname": "📎 Receipts",
+            "fields": [
+                "Approval Status",
+                "Approval History",
+                "Approvers",
+                "Approver Index"
+            ]
+        }
+    ]
+}

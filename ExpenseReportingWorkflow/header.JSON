@@ -1,0 +1,70 @@
+{
+    "elmType": "div",
+    "attributes": {
+        "class": "ms-borderColor-neutralTertiary"
+    },
+    "style": {
+        "width": "100%",
+        "border-top-width": "0px",
+        "border-bottom-width": "5px",
+        "border-left-width": "0px",
+        "border-right-width": "0px",
+        "border-style": "solid",
+        "margin-bottom": "16px",
+        "border-bottom-color": "darkgray"
+    },
+    "children": [
+        {
+            "elmType": "img",
+            "attributes": {
+                "src": "https://rezadorrani.com/wp-content/uploads/2020/10/Capture.png"
+            },
+            "style": {
+                "width": "70px"
+            }
+        },
+        {
+            "elmType": "div",
+            "style": {
+                "display": "flex",
+                "box-sizing": "border-box",
+                "align-items": "center"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "iconName": "Money",
+                        "class": "ms-fontSize-42 ms-fontWeight-regular ms-fontColor-themePrimary",
+                        "title": "Details"
+                    },
+                    "style": {
+                        "flex": "none",
+                        "padding": "0px",
+                        "padding-left": "30px",
+                        "height": "36px"
+                    }
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "attributes": {
+                "class": "ms-fontColor-neutralSecondary ms-fontWeight-bold ms-fontSize-24"
+            },
+            "style": {
+                "box-sizing": "border-box",
+                "width": "100%",
+                "text-align": "left",
+                "padding": "21px 12px",
+                "overflow": "hidden"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "=if( [$Title]=='','Expense Request Form','Expense: ' +   [$Title] + [$Status]"
+                }
+            ]
+        }
+    ]
+}
