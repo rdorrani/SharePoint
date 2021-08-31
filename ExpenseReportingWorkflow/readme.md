@@ -23,7 +23,7 @@ Create a SP list with the following name: **Expense Reports**
   <tr> <td>Title</td>  <td>Single line of Text</td> <td>Yes</td><td>This will be the default column that gets created in a SharePoint list</td> </tr>
   <tr> <td>Start Date</td>  <td>Date and time</td> <td>Yes</td><td>  </td> </tr>
    <tr> <td>End Date</td>  <td>Date and time</td> <td>Yes</td><td>  </td> </tr>
-   <tr> <td>Amount</td>  <td>Currency</td> <td> <td>Yes</td> </td> </tr>
+   <tr> <td>Amount</td>  <td>Currency</td> <td>Yes</td><td>  </td> </tr>
      <tr> <td>Description</td>  <td>Multi lines of Text</td> <td>Yes</td><td>  </td> </tr>
        <tr> <td>Approval Status</td>  <td>Choice</td><td>No</td> <td> Set Choice values as 'New, Approved, Pending, Rejected'. Set Default value of column to New. </td> </tr>
    <tr> <td>Approval History</td>  <td>Multi lines of Text</td><td>No</td>  <td>  </td> </tr>
