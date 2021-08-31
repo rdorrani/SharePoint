@@ -35,10 +35,10 @@ Create a SP list with the following name: **Expense Reports**
 Ensure all of the columns mentioned in the above table + "Created By" column are a part of the "All Items" View.
 
 For "Approval Status" column > apply column formatting > add json as provided in link below.
-[Import JSON](https://github.com/rdorrani/PowerApps/blob/master/DocLibraryBrowser/DocumentLibraryExplorer_20210608135241.zip).
+[Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Approval%20Status%20Column.json).
 
 For "All Items" view switch to Tiles view and apply the json as provided in link below
-[Import JSON](https://github.com/rdorrani/PowerApps/blob/master/DocLibraryBrowser/DocumentLibraryExplorer_20210608135241.zip). <br> 
+[Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Tiles%20Formatting%20for%20All%20Items%20View.json). <br> 
 For Tiles view > format current view > advanced mode > add the JSON. <br> 
 Save the view.
 
