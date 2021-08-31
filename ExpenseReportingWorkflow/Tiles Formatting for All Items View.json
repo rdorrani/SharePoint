@@ -176,7 +176,7 @@
                       "width": "100%",
                       "height": "auto",
                       "margin-left": "-50%",
-                      "margin-top": "-60%",
+                      "margin-top": "-50%",
                       "display": "=if(length([$Approvers]) > 3 && loopIndex('personIterator') >= 2, 'none', '')",
                       "vertical-align": "baseline"
                     }
