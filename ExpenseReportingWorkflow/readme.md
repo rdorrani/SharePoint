@@ -45,8 +45,9 @@ Save the view.
 
 ### Step 3
 Go to Power Automate (flow.microsoft.com) and import the following flow:
-[Import flow](https://github.com/rdorrani/PowerApps/blob/master/DocLibraryBrowser/DocumentLibraryExplorer_20210608135241.zip). <br> 
-Once imported, ensure you update all the SharePoint actions to point to your newly created lists.
+[Import flow](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/%F0%9F%92%B2ExpenseReportApprovalWorkflow_20210831225203.zip). <br> 
+Once imported, ensure you update all the SharePoint actions to point to your newly created lists.  <br> 
+Make sure to turn the flow on.
 
 
 
