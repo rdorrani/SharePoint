@@ -25,7 +25,7 @@ Create a SP list with the following name: **Expense Reports**
    <tr> <td>End Date</td>  <td>Date and time</td> <td>  </td> </tr>
    <tr> <td>Amount</td>  <td>Currency</td> <td>  </td> </tr>
      <tr> <td>Description</td>  <td>Multi lines of Text</td> <td>  </td> </tr>
-       <tr> <td>Approval Status</td>  <td>Choice</td> Set Choice values as 'New, Approved, Pending, Rejected'. Set Default value of column to New.<td>  </td> </tr>
+       <tr> <td>Approval Status</td>  <td>Choice</td> <td> Set Choice values as 'New, Approved, Pending, Rejected'. Set Default value of column to New. </td> </tr>
    <tr> <td>Approval History</td>  <td>Multi lines of Text</td> <td>  </td> </tr>
   <tr> <td>Expense Type</td>  <td>Lookup</td> <td> Lookup Title column of "Expense Types" list created earlier. To create lookup column go to list settings.  </td> </tr>
     <tr> <td>Approvers</td>  <td>Person</td> <td> Set "allow multiple selections" for column to true. Set "Show profile photos" to true. </td> </tr>
