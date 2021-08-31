@@ -40,7 +40,11 @@ For "Approval Status" column > apply column formatting > add json as provided in
 For "All Items" view switch to Gallery view and apply the json as provided in link below.<br> 
 [Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Tiles%20Formatting%20for%20All%20Items%20View.json).<br> 
 For Gallery view > format current view > advanced mode > add the JSON. <br> 
-Save the view.
+Save the view.<br> <br> 
+
+Form Configuration for list.<br> 
+Header JSON [Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/header.JSON)<br> 
+Body JSON  [Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/body.JSON)<br> 
 
 
 ### Step 3
