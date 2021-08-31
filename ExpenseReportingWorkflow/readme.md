@@ -37,9 +37,9 @@ Ensure all of the columns mentioned in the above table + "Created By" column are
 For "Approval Status" column > apply column formatting > add json as provided in link below.<br> 
 [Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Approval%20Status%20Column.json).
 
-For "All Items" view switch to Tiles view and apply the json as provided in link below.<br> 
-[Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Tiles%20Formatting%20for%20All%20Items%20View.json). <br> <br> 
-For Tiles view > format current view > advanced mode > add the JSON. <br> 
+For "All Items" view switch to Gallery view and apply the json as provided in link below.<br> 
+[Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Tiles%20Formatting%20for%20All%20Items%20View.json).<br> 
+For Gallery view > format current view > advanced mode > add the JSON. <br> 
 Save the view.
 
 
