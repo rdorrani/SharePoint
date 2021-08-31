@@ -1,0 +1,361 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 360,
+  "width": 220,
+  "hideSelection": false,
+  "fillHorizontally": true,
+  "formatter": {
+    "elmType": "div",
+    "attributes": {
+      "class": "sp-card-container"
+    },
+    "children": [
+      {
+        "elmType": "button",
+        "attributes": {
+          "class": "sp-card-defaultClickButton",
+          "role": "presentation"
+        },
+        "customRowAction": {
+          "action": "defaultClick"
+        }
+      },
+      {
+        "elmType": "div",
+        "attributes": {
+          "class": "ms-bgColor-white sp-css-borderColor-neutralLight sp-card-borderHighlight sp-card-subContainer"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "[$Title]",
+                  "class": "ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent"
+                },
+                "style": {
+                  "flex-wrap": "wrap",
+                  "display": "flex",
+                  "white-space": "nowrap",
+                  "overflow": "hidden"
+                },
+                "txtContent": "=if ([$Title] == '', '–', [$Title])"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "[$Title]",
+                  "class": "ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent"
+                },
+                "txtContent": "='👉 '+[$Author.title]"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "attributes": {
+                  "class": "ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent"
+                },
+                "children": [
+                  {
+                    "columnFormatterReference": "='🔘 '+[$Expense_x0020_Type.lookupValue]"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "class": "ms-fontColor-neutralSecondary sp-card-content "
+                },
+                "txtContent": "📅 From - 📅 To"
+              },
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "=if ([$StartDate.displayValue] == '', '–', [$StartDate.displayValue])",
+                  "class": "ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent"
+                },
+                "txtContent": "=if ([$StartDate.displayValue] == '', '–', [$StartDate.displayValue]) + ' - ' + if ([$EndDate.displayValue] == '', '–', [$EndDate.displayValue])"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "attributes": {
+                  "class": "ms-fontColor-neutralSecondary sp-card-content"
+                },
+                "txtContent": "💲 Amount"
+              },
+              {
+                "elmType": "p",
+                "attributes": {
+                  "title": "=if ([$Amount.displayValue] == '', '–', [$Amount.displayValue])",
+                  "class": "ms-fontColor-neutralPrimary sp-card-content sp-card-highlightedContent "
+                },
+                "txtContent": "=if ([$Amount.displayValue] == '', '–', [$Amount.displayValue])"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer"
+            },
+            "style": {
+              "display": "=if([$Approvers]!='','flex','none')"
+            },
+            "children": [
+              {
+                "elmType": "p",
+                "txtContent": "🎭 Approvers :"
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer sp-card-content"
+            },
+            "style": {
+              "display": "=if([$Approvers]!='','flex','none')"
+            },
+            "children": [
+              {
+                "forEach": "personIterator in [$Approvers]",
+                "elmType": "div",
+                "style": {
+                  "width": "32px",
+                  "height": "32px",
+                  "overflow": "hidden",
+                  "border-radius": "50%",
+                  "margin": "2px",
+                  "display": "=if(loopIndex('personIterator') >= 3, 'none', '')"
+                },
+                "children": [
+                  {
+                    "elmType": "p",
+                    "txtContent": "=if([$ApprovalStatus]=='Approved','🟢',if([$ApprovalStatus]=='Pending' && (loopIndex('personIterator')+1)<[$ApproverIndex],'🟢',if([$ApprovalStatus]=='Pending' && (loopIndex('personIterator')+1)==[$ApproverIndex],'🟡',if([$ApprovalStatus]=='Rejected' && (loopIndex('personIterator')+1)<[$ApproverIndex],'🟢',if([$ApprovalStatus]=='Rejected' && (loopIndex('personIterator')+1)==[$ApproverIndex],'🔴','⚪')))))",
+                    "style": {
+                      "position": "relative",
+                      "text-align": "center",
+                      "top": "50%",
+                      "left": "50%",
+                      "width": "100%",
+                      "height": "auto",
+                      "margin-left": "-50%",
+                      "margin-top": "-60%",
+                      "display": "=if(length([$Approvers]) > 3 && loopIndex('personIterator') >= 2, 'none', '')",
+                      "vertical-align": "baseline"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": "sp-card-displayColumnContainer "
+            },
+            "style": {
+              "display": "=if([$Approvers]!='','flex','none')"
+            },
+            "children": [
+              {
+                "forEach": "personIterator in [$Approvers]",
+                "elmType": "div",
+                "style": {
+                  "width": "32px",
+                  "height": "32px",
+                  "overflow": "hidden",
+                  "border-radius": "50%",
+                  "margin": "2px",
+                  "display": "=if(loopIndex('personIterator') >= 3, 'none', '')"
+                },
+                "children": [
+                  {
+                    "elmType": "img",
+                    "attributes": {
+                      "src": "=@currentWeb + '/_layouts/15/userphoto.aspx?size=S&accountname=' + [$personIterator.email]",
+                      "title": "[$personIterator.title]"
+                    },
+                    "style": {
+                      "position": "relative",
+                      "top": "50%",
+                      "left": "50%",
+                      "width": "100%",
+                      "height": "auto",
+                      "margin-left": "-50%",
+                      "margin-top": "-50%",
+                      "display": "=if(length([$Approvers]) > 3 && loopIndex('personIterator') >= 2, 'none', '')",
+                      "vertical-align": "baseline"
+                    }
+                  },
+                  {
+                    "elmType": "div",
+                    "attributes": {
+                      "title": "=join([$Approvers].title, ', ')",
+                      "class": "ms-bgColor-neutralLight ms-fontColor-neutralSecondary"
+                    },
+                    "style": {
+                      "width": "100%",
+                      "height": "100%",
+                      "text-align": "center",
+                      "line-height": "30px",
+                      "font-size": "14px",
+                      "display": "=if(length([$Approvers]) > 3 && loopIndex('personIterator') == 2, '', 'none')"
+                    },
+                    "children": [
+                      {
+                        "elmType": "span",
+                        "txtContent": "='+' + toString(length([$Approvers]) - (2))"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "position": "relative",
+              "width": "100%",
+              "height": "70px"
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "absolute",
+                  "display": "flex",
+                  "align-items": "center",
+                  "justify-content": "center",
+                  "width": "100%",
+                  "height": "100%"
+                },
+                "children": [
+                  {
+                    "elmType": "div",
+                    "style": {
+                      "width": "100%",
+                      "height": "3px"
+                    },
+                    "attributes": {
+                      "class": "ms-bgColor-neutralSecondaryAlt"
+                    }
+                  }
+                ]
+              },
+              {
+                "elmType": "div",
+                "style": {
+                  "position": "absolute",
+                  "display": "flex",
+                  "align-items": "center",
+                  "justify-content": "=if([$ApprovalStatus]=='Pending','center',if([$ApprovalStatus]=='New','left','flex-end'))",
+                  "width": "100%",
+                  "height": "100%"
+                },
+                "children": [
+                  {
+                    "elmType": "div",
+                    "style": {
+                      "width": "20px",
+                      "height": "20px",
+                      "border-radius": "50%",
+                      "cursor": "pointer"
+                    },
+                    "attributes": {
+                      "class": "=if([$ApprovalStatus]=='Rejected','ms-bgColor-red',if([$ApprovalStatus]=='Pending','ms-bgColor-yellow',if([$ApprovalStatus]=='Approved','ms-bgColor-green','ms-bgColor-blue')))"
+                    },
+                    "customCardProps": {
+                      "directionalHint": "rightCenter",
+                      "openOnEvent": "click",
+                      "isBeakVisible": true,
+                      "formatter": {
+                        "elmType": "div",
+                        "style": {
+                          "width": "300px",
+                          "height": "300px",
+                          "padding": "10px 20px 10px 20px",
+                          "background-color": "#E6E6E3"
+                        },
+                        "children": [
+                          {
+                            "elmType": "div",
+                            "txtContent": "=if([$ApprovalStatus]!='New',[$ApprovalHistory],'No History Available'",
+                            "style": {
+                              "width": "100%",
+                              "height": "100%"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "attributes": {
+              "class": ""
+            },
+            "children": [
+              {
+                "elmType": "div",
+                "attributes": {
+                  "class": "sp-card-content sp-card-formatterRef"
+                },
+                "style": {
+                  "align-items": "center",
+                  "text-align": "center"
+                },
+                "children": [
+                  {
+                    "columnFormatterReference": "[$ApprovalStatus]"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

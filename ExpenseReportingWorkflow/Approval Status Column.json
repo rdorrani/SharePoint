@@ -1,0 +1,244 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "style": {
+    "box-sizing": "border-box",
+    "padding": "0 2px"
+  },
+  "attributes": {
+    "class": {
+      "operator": ":",
+      "operands": [
+        {
+          "operator": "==",
+          "operands": [
+            "[$ApprovalStatus]",
+            "New"
+          ]
+        },
+        "sp-css-backgroundColor-BgDarkBlue sp-css-borderColor-LightBlueFont",
+        {
+          "operator": ":",
+          "operands": [
+            {
+              "operator": "==",
+              "operands": [
+                "[$ApprovalStatus]",
+                "Approved"
+              ]
+            },
+            "sp-css-backgroundColor-BgDarkGreen",
+            {
+              "operator": ":",
+              "operands": [
+                {
+                  "operator": "==",
+                  "operands": [
+                    "[$ApprovalStatus]",
+                    "Rejected"
+                  ]
+                },
+                "sp-css-backgroundColor-BgDarkRed",
+                {
+                  "operator": ":",
+                  "operands": [
+                    {
+                      "operator": "==",
+                      "operands": [
+                        "[$ApprovalStatus]",
+                        "Pending"
+                      ]
+                    },
+                    "sp-css-backgroundColor-BgBrown",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "children": [
+    {
+      "elmType": "span",
+      "style": {
+        "line-height": "16px",
+        "height": "14px"
+      },
+      "attributes": {
+        "iconName": {
+          "operator": ":",
+          "operands": [
+            {
+              "operator": "==",
+              "operands": [
+                "[$ApprovalStatus]",
+                "New"
+              ]
+            },
+            "",
+            {
+              "operator": ":",
+              "operands": [
+                {
+                  "operator": "==",
+                  "operands": [
+                    "[$ApprovalStatus]",
+                    "Approved"
+                  ]
+                },
+                "",
+                {
+                  "operator": ":",
+                  "operands": [
+                    {
+                      "operator": "==",
+                      "operands": [
+                        "[$ApprovalStatus]",
+                        "Rejected"
+                      ]
+                    },
+                    "",
+                    {
+                      "operator": ":",
+                      "operands": [
+                        {
+                          "operator": "==",
+                          "operands": [
+                            "[$ApprovalStatus]",
+                            "Pending"
+                          ]
+                        },
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "class": {
+          "operator": ":",
+          "operands": [
+            {
+              "operator": "==",
+              "operands": [
+                "[$ApprovalStatus]",
+                "New"
+              ]
+            },
+            "sp-css-color-LightBlueFont",
+            {
+              "operator": ":",
+              "operands": [
+                {
+                  "operator": "==",
+                  "operands": [
+                    "[$ApprovalStatus]",
+                    "Approved"
+                  ]
+                },
+                "",
+                {
+                  "operator": ":",
+                  "operands": [
+                    {
+                      "operator": "==",
+                      "operands": [
+                        "[$ApprovalStatus]",
+                        "Rejected"
+                      ]
+                    },
+                    "",
+                    {
+                      "operator": ":",
+                      "operands": [
+                        {
+                          "operator": "==",
+                          "operands": [
+                            "[$ApprovalStatus]",
+                            "Pending"
+                          ]
+                        },
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "elmType": "span",
+      "style": {
+        "overflow": "hidden",
+        "text-overflow": "ellipsis",
+        "padding": "0 3px"
+      },
+      "txtContent": "[$ApprovalStatus]",
+      "attributes": {
+        "class": {
+          "operator": ":",
+          "operands": [
+            {
+              "operator": "==",
+              "operands": [
+                "[$ApprovalStatus]",
+                "New"
+              ]
+            },
+            "sp-css-color-WhiteText",
+            {
+              "operator": ":",
+              "operands": [
+                {
+                  "operator": "==",
+                  "operands": [
+                    "[$ApprovalStatus]",
+                    "Approved"
+                  ]
+                },
+                "sp-css-color-WhiteText",
+                {
+                  "operator": ":",
+                  "operands": [
+                    {
+                      "operator": "==",
+                      "operands": [
+                        "[$ApprovalStatus]",
+                        "Rejected"
+                      ]
+                    },
+                    "sp-css-color-WhiteText",
+                    {
+                      "operator": ":",
+                      "operands": [
+                        {
+                          "operator": "==",
+                          "operands": [
+                            "[$ApprovalStatus]",
+                            "Pending"
+                          ]
+                        },
+                        "sp-css-color-WhiteText",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
