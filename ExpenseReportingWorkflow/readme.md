@@ -19,15 +19,15 @@ Create a SP list with the following name: **Expense Types**
 Create a SP list with the following name: **Expense Reports**
 
 <table>
-  <th>Column Name</th>  <th>Column Type</th>  <th>Comments</th> 
-  <tr> <td>Title</td>  <td>Single line of Text</td> <td>This will be the default column that gets created in a SharePoint list</td> </tr>
-  <tr> <td>Start Date</td>  <td>Date and time</td> <td>  </td> </tr>
-   <tr> <td>End Date</td>  <td>Date and time</td> <td>  </td> </tr>
-   <tr> <td>Amount</td>  <td>Currency</td> <td>  </td> </tr>
-     <tr> <td>Description</td>  <td>Multi lines of Text</td> <td>  </td> </tr>
+  <th>Column Name</th>  <th>Column Type</th>    <th>Required</th> <th>Comments</th> 
+  <tr> <td>Title</td>  <td>Single line of Text</td> <td>Yes</td><td>This will be the default column that gets created in a SharePoint list</td> </tr>
+  <tr> <td>Start Date</td>  <td>Date and time</td> <td>Yes</td><td>  </td> </tr>
+   <tr> <td>End Date</td>  <td>Date and time</td> <td>Yes</td><td>  </td> </tr>
+   <tr> <td>Amount</td>  <td>Currency</td> <td> <td>Yes</td> </td> </tr>
+     <tr> <td>Description</td>  <td>Multi lines of Text</td> <td>Yes</td><td>  </td> </tr>
        <tr> <td>Approval Status</td>  <td>Choice</td> <td> Set Choice values as 'New, Approved, Pending, Rejected'. Set Default value of column to New. </td> </tr>
    <tr> <td>Approval History</td>  <td>Multi lines of Text</td> <td>  </td> </tr>
-  <tr> <td>Expense Type</td>  <td>Lookup</td> <td> Lookup Title column of "Expense Types" list created earlier. To create lookup column go to list settings.  </td> </tr>
+  <tr> <td>Expense Type</td>  <td>Lookup</td><td>Yes</td> <td> Lookup Title column of "Expense Types" list created earlier. To create lookup column go to list settings.  </td> </tr>
     <tr> <td>Approvers</td>  <td>Person</td> <td> Set "allow multiple selections" for column to true. Set "Show profile photos" to true. </td> </tr>
     <tr> <td>Approver Index</td>  <td>Number</td> <td> Set "Number of decimal places" for column to 0. </td> </tr>
 </table>
