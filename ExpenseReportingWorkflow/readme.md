@@ -34,18 +34,18 @@ Create a SP list with the following name: **Expense Reports**
 
 Ensure all of the columns mentioned in the above table + "Created By" column are a part of the "All Items" View.
 
-For "Approval Status" column > apply column formatting > add json as provided in link below.
+For "Approval Status" column > apply column formatting > add json as provided in link below.<br> 
 [Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Approval%20Status%20Column.json).
 
-For "All Items" view switch to Tiles view and apply the json as provided in link below
-[Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Tiles%20Formatting%20for%20All%20Items%20View.json). <br> 
+For "All Items" view switch to Tiles view and apply the json as provided in link below.<br> 
+[Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/Tiles%20Formatting%20for%20All%20Items%20View.json). <br> <br> 
 For Tiles view > format current view > advanced mode > add the JSON. <br> 
 Save the view.
 
 
 ### Step 3
-Go to Power Automate (flow.microsoft.com) and import the following flow:
-[Import flow](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/%F0%9F%92%B2ExpenseReportApprovalWorkflow_20210831225203.zip). <br> 
+Go to Power Automate (flow.microsoft.com) and import the following flow:<br> 
+[Import flow](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/%F0%9F%92%B2ExpenseReportApprovalWorkflow_20210831225203.zip). <br> <br> 
 Once imported, ensure you update all the SharePoint actions to point to your newly created lists.  <br> 
 Make sure to turn the flow on.
 
