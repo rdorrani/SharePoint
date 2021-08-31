@@ -45,6 +45,7 @@ Save the view.<br> <br>
 Form Configuration for list.<br> 
 Header JSON [Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/header.JSON)<br> 
 Body JSON  [Import JSON](https://github.com/rdorrani/SharePoint/blob/master/ExpenseReportingWorkflow/body.JSON)<br> 
+Edit columns for form configuration and hide the following columns : Approval Status, Approval History, Approvers & Approver Index.<br> 
 
 
 ### Step 3
