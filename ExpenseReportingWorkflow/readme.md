@@ -13,7 +13,7 @@ Create a SP list with the following name: **Expense Types**
   <tr> <td>Approvers</td>  <td>Person</td> <td> Set "allow multiple selections" for column to true. </td> </tr>
 </table>
 
-**Enter Expense Type & Approver data in list. <br> 
+**Enter Expense Type & Approver data in list.** <br> 
 
 ### Step 2
 Create new List in Modern SharePoint site.
