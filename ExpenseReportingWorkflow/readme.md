@@ -25,11 +25,11 @@ Create a SP list with the following name: **Expense Reports**
    <tr> <td>End Date</td>  <td>Date and time</td> <td>Yes</td><td>  </td> </tr>
    <tr> <td>Amount</td>  <td>Currency</td> <td> <td>Yes</td> </td> </tr>
      <tr> <td>Description</td>  <td>Multi lines of Text</td> <td>Yes</td><td>  </td> </tr>
-       <tr> <td>Approval Status</td>  <td>Choice</td> <td> Set Choice values as 'New, Approved, Pending, Rejected'. Set Default value of column to New. </td> </tr>
-   <tr> <td>Approval History</td>  <td>Multi lines of Text</td> <td>  </td> </tr>
-  <tr> <td>Expense Type</td>  <td>Lookup</td><td>Yes</td> <td> Lookup Title column of "Expense Types" list created earlier. To create lookup column go to list settings.  </td> </tr>
-    <tr> <td>Approvers</td>  <td>Person</td> <td> Set "allow multiple selections" for column to true. Set "Show profile photos" to true. </td> </tr>
-    <tr> <td>Approver Index</td>  <td>Number</td> <td> Set "Number of decimal places" for column to 0. </td> </tr>
+       <tr> <td>Approval Status</td>  <td>Choice</td><td>No</td> <td> Set Choice values as 'New, Approved, Pending, Rejected'. Set Default value of column to New. </td> </tr>
+   <tr> <td>Approval History</td>  <td>Multi lines of Text</td><td>No</td>  <td>  </td> </tr>
+  <tr> <td>Expense Type</td>  <td>Lookup</td><td>Yes</td> <td>No</td> <td> Lookup Title column of "Expense Types" list created earlier. To create lookup column go to list settings.  </td> </tr>
+    <tr> <td>Approvers</td>  <td>Person</td> <td>No</td> <td> Set "allow multiple selections" for column to true. Set "Show profile photos" to true. </td> </tr>
+    <tr> <td>Approver Index</td>  <td>Number</td> <td>No</td> <td> Set "Number of decimal places" for column to 0. </td> </tr>
 </table>
 
 Ensure all of the columns mentioned in the above table + "Created By" column are a part of the "All Items" View.
