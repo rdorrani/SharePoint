@@ -38,14 +38,14 @@ For "Approval Status" column > apply column formatting > add json as provided in
 [Import JSON](https://github.com/rdorrani/PowerApps/blob/master/DocLibraryBrowser/DocumentLibraryExplorer_20210608135241.zip).
 
 For "All Items" view switch to Tiles view and apply the json as provided in link below
-[Import JSON](https://github.com/rdorrani/PowerApps/blob/master/DocLibraryBrowser/DocumentLibraryExplorer_20210608135241.zip).
-For Tiles view > format current view > advanced mode > add the JSON.
+[Import JSON](https://github.com/rdorrani/PowerApps/blob/master/DocLibraryBrowser/DocumentLibraryExplorer_20210608135241.zip). <br> 
+For Tiles view > format current view > advanced mode > add the JSON. <br> 
 Save the view.
 
 
 ### Step 3
 Go to Power Automate (flow.microsoft.com) and import the following flow:
-[Import flow](https://github.com/rdorrani/PowerApps/blob/master/DocLibraryBrowser/DocumentLibraryExplorer_20210608135241.zip).
+[Import flow](https://github.com/rdorrani/PowerApps/blob/master/DocLibraryBrowser/DocumentLibraryExplorer_20210608135241.zip). <br> 
 Once imported, ensure you update all the SharePoint actions to point to your newly created lists.
 
 
