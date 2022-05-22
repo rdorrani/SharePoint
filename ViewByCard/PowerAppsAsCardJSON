@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "div",
+  "children": [
+    {
+      "elmType": "div",
+      "txtContent": "📲 App As Card",
+      "style": {
+        "border-radius": "3px",
+        "cursor": "pointer",
+        "padding": "5px 10px",
+        "margin": "5px",
+        "white-space": "nowrap",
+        "font-size": "13px"
+      },
+      "attributes": {
+        "class": "ms-bgColor-themePrimary ms-bgColor-themeDark--hover ms-fontColor-white"
+      },
+      "customCardProps": {
+        "openOnEvent": "hover",
+        "directionalHint": "rightCenter",
+        "isBeakVisible": true,
+        "formatter": {
+          "customRowAction": "editProps",
+          "elmType": "filepreview",
+          "attributes": {
+            "src": "='https://apps.powerapps.com/play/3678db34-a6e1-4b38-b5db-2e13c1d04d16?tenantId=07446956-493d-42c8-ad05-e939cb52153f?ID='+[$ID]"
+          },
+          "style": {
+            "width": "=  @window.innerHeight * 0.45 + 'px'",
+            "height": "= @window.innerHeight * 0.8 + 'px'"
+          }
+        }
+      }
+    }
+  ]
+}
